@@ -7,7 +7,7 @@ function App() {
       <form
         name="contact v1"
         method="post"
-        data-netlify="true"
+        dataNetlify="true"
         onSubmit="submit"
       >
         <div>
