@@ -83,12 +83,7 @@ function App() {
 
   return (
     <div>
-      <form
-        name="contact v1"
-        method="post"
-        onSubmit={handleSubmit}
-        netlify="true"
-      >
+      <form name="contact v1" method="POST" onSubmit={handleSubmit} netlify>
         <div>
           <label>
             First Name:
