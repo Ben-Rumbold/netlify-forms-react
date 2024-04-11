@@ -4,15 +4,9 @@ import "./App.css";
 function App() {
   return (
     <div>
-      <form
-        name="contact v1"
-        method="post"
-        dataNetlify="true"
-        onSubmit="submit"
-      >
+      <form name="contact v1" method="post" onSubmit="submit" netlify>
         <div>
           <label>
-            {" "}
             First Name:
             <input type="text" name="first-name" />
           </label>
@@ -24,8 +18,10 @@ function App() {
         </div>
 
         <div>
-          <label>Comments?</label>
-          <textarea name="comments" cols="30" rows="10"></textarea>
+          <label>
+            Comments?
+            <textarea name="comments" cols="30" rows="10"></textarea>
+          </label>
         </div>
 
         <button type="submit">Submit</button>
