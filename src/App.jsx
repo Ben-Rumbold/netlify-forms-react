@@ -67,11 +67,6 @@ function App() {
 
     if (Object.keys(errors).length > 0) {
       setErrors(errors);
-    } else {
-      // Form submission logic goes here
-      console.log("Form data:", formData);
-      // You can send the form data to your backend or to Netlify here
-      // For Netlify, simply remove this else block and let the form submission happen
     }
   };
 
@@ -88,14 +83,15 @@ function App() {
         method="POST"
         onSubmit={handleSubmit}
         data-netlify="true"
+        netlify-honeypot="bot-field"
       >
         <input type="hidden" name="form-name" value="contact-v1" />
         <div>
           <label>
-            First Name:
+            Name:
             <input
               type="text"
-              name="firstName"
+              name="name"
               value={formData.firstName}
               onChange={handleChange}
             />
@@ -109,7 +105,7 @@ function App() {
           <label htmlFor="email">Email</label>
           <input
             id="email"
-            type="text"
+            type="email"
             name="email"
             value={formData.email}
             onChange={handleChange}
